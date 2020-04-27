@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<div class="container">
+  <div>
+    <hr>
+    <h6>Task 1</h6>
+    <button type="button" class="btn btn-primary" (click)="onClick()">Display Details</button>
+  </div>
+  <div>
+    <hr>
+    <h6>Task 2</h6>
+    <p>Secret Password="tuna"</p>
+  </div>
+  <div>
+    <hr>
+    <h6>Extraa Task</h6>
+    <p *ngIf="showPassword">{{ password }}</p>
+  </div>
+  <div>
+    <hr>
+    <button class="btn btn-secondary" (click)="Add()">Click to Add new Row</button>
+    <div *ngFor="let i of log" [ngStyle]="{backgroundColor:i >=5?'blue':'transparent'}" [ngClass]="{white:i>=5}">{{i}}</div>
+  </div>
+  <div>
+    <hr>
+    <button class="btn btn-secondary" (click)="Addtime()">Click to Add new time</button>
+    <div *ngFor="let i of logtime ;let j = index" [ngStyle]="{backgroundColor:j >5?'blue':'transparent'}" [ngClass]="{white:j>5}">{{i}}</div>
+  </div>
+</div>
